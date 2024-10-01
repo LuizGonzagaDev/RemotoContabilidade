@@ -66,49 +66,52 @@ for tabela in arquivo_word.tables:
             total_ativo= linha.cells[1].text.strip()
 
 #preenche os campos com os valores extraidos do arquivo
-campo_ativo_circulante = driver.find_element(By.XPATH,"//input[@id='ativo_circulante']")
+campo_ativo_circulante = driver.find_element(By.ID, 'ativo_circulante')
 sleep(1)
 campo_ativo_circulante.click()
-campo_ativo_circulante.send_keys(campo_ativo_circulante)
+campo_ativo_circulante.send_keys(ativo_circulante)
 
-
-campo_caixa_equivalente = driver.find_element(By.XPATH,"//input[@id='caixa_equivalente']")
+campo_caixa_equivalente = driver.find_element(By.ID,'caixa_equivalente')
 sleep(1)
 campo_caixa_equivalente.click()
-campo_caixa_equivalente.send_keys(campo_caixa_equivalente)
+campo_caixa_equivalente.send_keys(caixa_equivalente)
 
-
-campo_contas_receber = driver.find_element(By.XPATH,"//input[@id='contas_receber']")
+campo_contas_receber = driver.find_element(By.ID,'contas_receber')
 sleep(1)
 campo_contas_receber.click()
-campo_contas_receber.send_keys(campo_contas_receber)
+campo_contas_receber.send_keys(contas_receber)
 
-
-campo_estoques = driver.find_element(By.XPATH,"//input[@id='estoques']")
+campo_estoques = driver.find_element(By.ID,'estoques')
 sleep(1)
 campo_estoques.click()
-campo_estoques.send_keys(campo_estoques)
+campo_estoques.send_keys(estoques)
 
-
-campo_ativo_nao_circulante = driver.find_element(By.XPATH,"//input[@id='ativo_nao_circulante']")
+campo_ativo_nao_circulante = driver.find_element(By.ID,'ativo_nao_circulante')
 sleep(1)
 campo_ativo_nao_circulante.click()
-campo_ativo_nao_circulante.send_keys(campo_ativo_nao_circulante)
+campo_ativo_nao_circulante.send_keys(ativo_nao_circulante)
 
-
-campo_imobilizado = driver.find_element(By.XPATH,"//input[@id='imobilizado']")
+campo_imobilizado = driver.find_element(By.ID,'imobilizado')
 sleep(1)
 campo_imobilizado.click()
-campo_imobilizado.send_keys(campo_imobilizado)
+campo_imobilizado.send_keys(imobilizado)
 
-campo_intangivel = driver.find_element(By.XPATH,"//input[@id='intangivel']")
+campo_intangivel = driver.find_element(By.ID, 'intangivel')
 sleep(1)
 campo_intangivel.click()
-campo_intangivel.send_keys(campo_intangivel)
+campo_intangivel.send_keys(intangivel)
 
-campo_total_ativo = driver.find_element(By.XPATH,"//input[@id='total_ativo']")
+campo_total_ativo = driver.find_element(By.ID,'total_ativo')
 sleep(1)
 campo_total_ativo.click()
-campo_total_ativo.send_keys(campo_total_ativo)
+campo_total_ativo.send_keys(total_ativo)
+
+#clica no botao cadastrar
+botao_cadastrar = driver.find_element(By.XPATH,"//button[@class='btn btn-primary']")
+sleep(2)
+botao_cadastrar.click()
+
+
+
 
 input('aperte ENTER para fechar')
