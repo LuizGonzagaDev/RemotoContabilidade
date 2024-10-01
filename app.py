@@ -25,7 +25,11 @@ sleep(2)
 #botao entrar
 botao_entrar = driver.find_element(By.XPATH,"//button[@class='btn btn-primary w-100']")
 botao_entrar.click()
+sleep(3)
 
-
+#cadastra balanço patrimonial
+botoes_sistemas = driver.find_elements(By.XPATH,"//a[@class='btn btn-primary mt-auto']")
+sleep(2)
+botoes_sistemas[0].click()
 
 input('aperte ENTER para fechar')
