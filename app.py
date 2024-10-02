@@ -38,7 +38,7 @@ caminho_arquivo_word = r'C:\Users\Luiz\Documents\GitHub\RemotoContabilidade\rela
 arquivo_word = Document(caminho_arquivo_word)
 
 ativo_circulante = ''
-caixa_equivalente = ''
+caixa_equivalentes = ''
 contas_receber = ''
 estoques = ''
 ativo_nao_circulante = ''
@@ -51,7 +51,7 @@ for tabela in arquivo_word.tables:
         if 'Ativo Circulante' in linha.cells[0].text.strip():
             ativo_circulante = linha.cells[1].text.strip()
         elif 'Caixa e Equivalentes' in linha.cells[0].text.strip():
-            caixa_equivalente = linha.cells[1].text.strip()
+            caixa_equivalentes = linha.cells[1].text.strip()
         elif 'Contas a Receber' in linha.cells[0].text.strip():
             contas_receber = linha.cells[1].text.strip()
         elif 'Estoques' in linha.cells[0].text.strip():
@@ -71,12 +71,12 @@ sleep(1)
 campo_ativo_circulante.click()
 campo_ativo_circulante.send_keys(ativo_circulante)
 
-campo_caixa_equivalente = driver.find_element(By.ID,'caixa_equivalente')
+campo_caixa_equivalentes = driver.find_element(By.ID, 'caixa_equivalentes')
 sleep(1)
-campo_caixa_equivalente.click()
-campo_caixa_equivalente.send_keys(caixa_equivalente)
+campo_caixa_equivalentes.click()
+campo_caixa_equivalentes.send_keys(caixa_equivalentes)
 
-campo_contas_receber = driver.find_element(By.ID,'contas_receber')
+campo_contas_receber = driver.find_element(By.ID, 'contas_receber')
 sleep(1)
 campo_contas_receber.click()
 campo_contas_receber.send_keys(contas_receber)
@@ -86,7 +86,7 @@ sleep(1)
 campo_estoques.click()
 campo_estoques.send_keys(estoques)
 
-campo_ativo_nao_circulante = driver.find_element(By.ID,'ativo_nao_circulante')
+campo_ativo_nao_circulante = driver.find_element(By.ID, 'ativo_nao_circulante')
 sleep(1)
 campo_ativo_nao_circulante.click()
 campo_ativo_nao_circulante.send_keys(ativo_nao_circulante)
@@ -101,7 +101,7 @@ sleep(1)
 campo_intangivel.click()
 campo_intangivel.send_keys(intangivel)
 
-campo_total_ativo = driver.find_element(By.ID,'total_ativo')
+campo_total_ativo = driver.find_element(By.ID, 'total_ativo')
 sleep(1)
 campo_total_ativo.click()
 campo_total_ativo.send_keys(total_ativo)
@@ -110,8 +110,6 @@ campo_total_ativo.send_keys(total_ativo)
 botao_cadastrar = driver.find_element(By.XPATH,"//button[@class='btn btn-primary']")
 sleep(2)
 botao_cadastrar.click()
-
-
 
 
 input('aperte ENTER para fechar')
